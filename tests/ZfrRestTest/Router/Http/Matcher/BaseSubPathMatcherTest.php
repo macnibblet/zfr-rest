@@ -138,7 +138,7 @@ class BaseSubPathMatcherTest extends TestCase
 
         $this->associationMatcher->expects($this->never())->method('matchSubPath');
         $this->collectionMatcher->expects($this->never())->method('matchSubPath');
-        
+
         $result = $this->baseMatcher->matchSubPath($baseResource, '/tweets/123', $previousMatch);
 
         $this->assertSame($result, $previousMatch);
